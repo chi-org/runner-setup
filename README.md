@@ -73,3 +73,5 @@
      - After installation, if authentication is successfully, a listener pod will be created in ns arc-systems and runner pods created in arc-runners
        ![image-20250117134404992](./README.assets/image-20250117134404992.png)		![image-20250117134529782](./README.assets/image-20250117134529782.png)
      - Now the repos and workflows are permitted in our runner group can use our runners.
+
+   - Additional: Whenever you want to add another runner set, repeat the above steps, start with create a runner group, modify values.yaml file and use helm to install another runner scale set (you don't need to create a controller again, each time a new runner set installed, a new listener created in `arc-systems` namespace and use the same old controller)
