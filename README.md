@@ -13,7 +13,7 @@
 
 #### 3. Step by step guidance
 
-1. K8S cluster required with helm installed
+1. K8S cluster with helm installed is required 
 
 2. Install Action Runner Controller (arc) 
 
