@@ -1,0 +1,22 @@
+githubConfigSecret: "github-app-secret"
+githubConfigUrl: https://github.com/<org-name>
+runnerGroup: "robot-dind"
+runnerScaleSetName: "robot-dind"
+minRunners: 1
+maxRunners: 10
+containerMode:
+ type: "dind"
+template:
+  spec:
+     containers:
+      - name: runner
+        image: <your-runner-image>
+        command: ["/home/runner/run.sh"]
+        env:
+          - name: DOCKER_HOST
+            value: unix:///var/run/docker.sock
+        volumeMounts:
+          - name: work
+            mountPath: /home/runner/_work
+          - name: dind-sock
+            mountPath: /var/run
