@@ -1,17 +1,17 @@
 # Github self-hosted runner scale set setup for organization
-#### 1. Summary
+#### A. Summary
 
 - Runners are in organization level (shared runners)
 - Authentication by github app (auto install on current and future repos)
 - 3 runner groups correspond to 3 runner sets (ubuntu-dind, robot-dind, ansible-dind), in this guidance we only create robot-dind runner set.
 - Each runner set: minRunners: 1, maxRunners: 10
 
-#### 2. Note
+#### B. Note
 
 - Logs are kept by github action for each run, upload artifact for test result
 - Logs and Artifact default retension day: 90(can be customized)
 
-#### 3. Step by step guidance
+#### C. Step by step guidance
 
 1. K8S cluster with helm installed is required 
 
