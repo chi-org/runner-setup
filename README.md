@@ -55,12 +55,12 @@
      kubectl create secret generic github-app-secret --namespace=arc-runners --from-literal=github_app_id=<app-id> --from-literal=github_app_installation_id=<installation-id> --from-literal=github_app_private_key='-----BEGIN RSA PRIVATE KEY-----********-----END RSA PRIVATE KEY-----'
      ```
 
-   - Build a custom docker image for runner based on the default runner image: Modify **custom-runner-image**/**Dockerfile** in this repo to customize your image, build and push it to your container registry
-
    - Create a runner group so that we can share our runners throughout the organization and manage repos access to our runner:
 
      - Go to **Org Settings** > **Actions** > **Runners group** and create a new runner group called `robot-dind` (if you change this name, please modify the runner group name in **actions-runner-scale-set/values.yaml** file)
      - Manage repo and workflow access to our runner and create.
+
+   - Build a custom docker image for runner based on the default runner image: Modify **custom-runner-image**/**Dockerfile** in this repo to customize your image, build and push it to your container registry.
 
    - Install arc-runner-set
 
