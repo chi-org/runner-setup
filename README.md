@@ -9,7 +9,7 @@
 #### 2. Note
 
 - Logs are kept by github action for each run, upload artifact for test result
-- [Logs and Artifact default retension day: 90](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/storing-and-sharing-data-from-a-workflow#:~:text=All actions and workflows called,retention period can be customized.) (can be customized)
+- Logs and Artifact default retension day: 90(can be customized)
 
 #### 3. Step by step guidance
 
