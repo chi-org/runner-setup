@@ -5,7 +5,7 @@ runnerScaleSetName: "robot-dind"
 minRunners: 1
 maxRunners: 10
 containerMode:
- type: "dind"
+  type: "dind"
 template:
   spec:
      containers:
